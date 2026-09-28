@@ -461,5 +461,6 @@ document.querySelectorAll('.fbtn').forEach(btn=>{btn.addEventListener('click',()
 const track=document.getElementById('marqueeTrack');track.innerHTML+=track.innerHTML;track.querySelectorAll('img.logo').forEach(img=>{img.addEventListener('error',()=>{const b=document.createElement('span');b.className='logo-fallback';b.textContent=img.dataset.l||'•';b.style.width='24px';b.style.height='24px';img.replaceWith(b);});});
 const toast=document.getElementById('toast');document.getElementById('copyBtn').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('hg329558@gmail.com');toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2200);}catch(e){window.location.href='mailto:hg329558@gmail.com';}});
 </script>
+<script data-goatcounter="https://harshgoyal1.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
