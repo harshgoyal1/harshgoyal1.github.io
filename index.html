@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harsh Goyal | AI Platform & Cloud Architect</title>
+<meta name="description" content="AI Platform & Cloud Architect — agentic AI, AI governance and multi-cloud DevSecOps. I design and build the platforms enterprises run their AI on. Abu Dhabi, UAE.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F5F1;--bg-2:#EDEBE3;--surface:#FFFFFF;--ink:#161A22;--ink-soft:#525968;--ink-faint:#888D9B;--line:#E1DED4;--blue:#33466E;--blue-deep:#1E2C4A;--violet:#57506E;--teal:#3F5C4E;--amber:#9C7A3C;--grad:linear-gradient(120deg,#1E2C4A 0%,#33466E 100%);--grad-soft:linear-gradient(120deg,rgba(51,70,110,.08),rgba(87,80,110,.08),rgba(63,92,78,.08));--shadow-s:0 4px 14px rgba(20,25,40,.06);--shadow-m:0 14px 40px rgba(20,25,40,.10);--shadow-l:0 24px 70px rgba(20,25,40,.14);--r-s:10px;--r-m:16px;--r-l:24px;--maxw:1140px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Sora',sans-serif;letter-spacing:-0.015em;line-height:1.18}a{color:inherit}img{display:block}
+.mono{font-family:'JetBrains Mono',monospace}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+::selection{background:#DADFE9}:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.logo-fallback{display:grid;place-items:center;border-radius:6px;background:var(--grad);color:#fff;font-family:'Sora',sans-serif;font-weight:800;font-size:.65rem}
+#progress{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--grad);z-index:200}
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:100;width:min(var(--maxw),calc(100% - 32px));background:rgba(255,255,255,.78);backdrop-filter:blur(16px);border:1px solid rgba(223,230,245,.9);border-radius:18px;box-shadow:var(--shadow-s);display:flex;align-items:center;justify-content:space-between;padding:10px 18px;transition:box-shadow .25s ease}
+nav.scrolled{box-shadow:var(--shadow-m)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:'Sora',sans-serif;font-weight:700;font-size:1.02rem}
+.brand-logo{width:36px;height:36px;border-radius:11px;background:var(--grad);display:grid;place-items:center;color:#fff;font-weight:800;font-size:.95rem;box-shadow:0 4px 12px rgba(51,70,110,.35)}
+.nav-links{display:flex;gap:4px;list-style:none}.nav-links a{text-decoration:none;font-size:.88rem;font-weight:500;color:var(--ink-soft);padding:8px 13px;border-radius:10px;transition:all .18s ease}
+.nav-links a:hover{background:var(--bg-2);color:var(--ink)}.nav-links a.active{background:var(--ink);color:#fff}
+.nav-cta{text-decoration:none;font-size:.87rem;font-weight:600;color:#fff;background:var(--grad);padding:9px 18px;border-radius:11px;box-shadow:0 5px 14px rgba(51,70,110,.3);transition:transform .15s ease,box-shadow .15s ease;white-space:nowrap}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 9px 22px rgba(51,70,110,.4)}
+#hamburger{display:none;background:none;border:none;cursor:pointer;width:38px;height:38px}#hamburger span{display:block;width:20px;height:2px;background:var(--ink);margin:4px auto;border-radius:2px}
+@media(max-width:980px){.nav-links{position:absolute;top:calc(100% + 10px);left:0;right:0;background:#fff;border:1px solid var(--line);border-radius:16px;flex-direction:column;padding:12px;box-shadow:var(--shadow-m);opacity:0;pointer-events:none;transform:translateY(-8px);transition:all .2s ease}.nav-links.open{opacity:1;pointer-events:auto;transform:translateY(0)}#hamburger{display:block}.nav-cta{display:none}}
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:140px 0 90px;overflow:hidden}
+#net{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(60% 55% at 18% 22%,rgba(51,70,110,.14),transparent 60%),radial-gradient(50% 50% at 85% 20%,rgba(87,80,110,.14),transparent 60%),radial-gradient(55% 55% at 75% 88%,rgba(63,92,78,.12),transparent 60%)}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:9px;font-size:.83rem;font-weight:600;background:#fff;border:1px solid var(--line);padding:8px 16px;border-radius:999px;box-shadow:var(--shadow-s);margin-bottom:26px}
+.pulse-dot{width:9px;height:9px;border-radius:50%;background:var(--teal);position:relative}.pulse-dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--teal);opacity:.6;animation:pulse 1.8s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.6);opacity:.7}100%{transform:scale(1.6);opacity:0}}
+.hero h1{font-size:clamp(2.3rem,4.8vw,3.55rem);font-weight:800}.type-wrap{display:block;min-height:1.25em;color:var(--blue-deep)}
+#typed{border-right:3px solid var(--violet);padding-right:4px;animation:blink 1s step-end infinite}@keyframes blink{0%,100%{border-color:var(--violet)}50%{border-color:transparent}}
+.hero p.lede{margin-top:24px;font-size:1.12rem;color:var(--ink-soft);max-width:54ch}.hero-actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.btn{text-decoration:none;font-weight:600;font-size:.97rem;border:none;cursor:pointer;padding:14px 26px;border-radius:13px;display:inline-flex;align-items:center;gap:10px;transition:transform .16s ease,box-shadow .16s ease;font-family:'Inter',sans-serif}
+.btn:hover{transform:translateY(-2px)}.btn-grad{background:var(--grad);color:#fff;box-shadow:0 8px 22px rgba(51,70,110,.32)}.btn-grad:hover{box-shadow:0 14px 30px rgba(51,70,110,.42)}
+.btn-line{background:#fff;color:var(--ink);border:1.5px solid var(--line);box-shadow:var(--shadow-s)}.btn-line:hover{border-color:var(--blue)}
+.hero-mini-stats{display:flex;gap:30px;margin-top:44px;flex-wrap:wrap}.hms b{font-family:'Sora',sans-serif;font-size:1.35rem;display:block}.hms span{font-size:.8rem;color:var(--ink-faint)}
+.photo-col{display:flex;justify-content:center}
+.photo-card{position:relative;width:min(360px,88vw);background:#fff;border-radius:28px;padding:16px 16px 22px;box-shadow:var(--shadow-l);border:1px solid var(--line);transform:rotate(2deg);transition:transform .3s ease}
+.photo-card:hover{transform:rotate(0deg) translateY(-4px)}
+.photo-frame{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/4.6;background:var(--grad-soft);display:grid;place-items:center}
+.photo-frame img{width:100%;height:100%;object-fit:cover;display:none}.photo-frame.has-img img{display:block}.photo-frame.has-img .photo-ph{display:none}
+.photo-ph{text-align:center;padding:20px}.photo-ph .avatar{width:110px;height:110px;margin:0 auto 16px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:#fff;font-family:'Sora',sans-serif;font-weight:800;font-size:2.2rem;box-shadow:0 10px 28px rgba(51,70,110,.35)}
+.photo-ph p{font-size:.85rem;color:var(--ink-soft)}.photo-ph .mono{font-size:.72rem;color:var(--ink-faint);display:block;margin-top:8px}
+.photo-caption{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding:0 6px;gap:10px}.photo-caption b{font-family:'Sora',sans-serif;font-size:1rem}.photo-caption span{font-size:.76rem;color:var(--ink-faint);text-align:right}
+.float-chip{position:absolute;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-m);padding:10px 14px;display:flex;align-items:center;gap:9px;font-size:.8rem;font-weight:600;animation:floaty 5s ease-in-out infinite}
+.float-chip img{width:20px;height:20px;object-fit:contain}.chip-1{top:6%;left:-14%;animation-delay:0s}.chip-2{bottom:24%;right:-13%;animation-delay:1.4s}.chip-3{bottom:-5%;left:-8%;animation-delay:2.6s}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@media(max-width:920px){.hero .wrap{grid-template-columns:1fr;gap:56px}.float-chip{display:none}.hero{min-height:auto}}
+.marquee-sec{padding:30px 0 6px}.marquee-label{text-align:center;font-size:.82rem;color:var(--ink-faint);font-weight:500;margin-bottom:22px}
+.marquee{overflow:hidden;position:relative;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marquee-track{display:flex;gap:18px;width:max-content;animation:scroll 40s linear infinite;padding:6px 0 14px}.marquee:hover .marquee-track{animation-play-state:paused}@keyframes scroll{to{transform:translateX(-50%)}}
+.logo-pill{display:flex;align-items:center;gap:11px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 20px;font-weight:600;font-size:.9rem;white-space:nowrap;box-shadow:var(--shadow-s);transition:transform .18s ease,box-shadow .18s ease}
+.logo-pill:hover{transform:translateY(-3px);box-shadow:var(--shadow-m)}.logo-pill img{width:24px;height:24px;object-fit:contain}
+section{padding:92px 0}.sec-head{text-align:center;max-width:680px;margin:0 auto 54px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:700;color:var(--blue-deep);background:#E8EAEF;padding:7px 16px;border-radius:999px;margin-bottom:18px}
+.sec-head h2{font-size:clamp(1.8rem,3.4vw,2.5rem);font-weight:800}.sec-head p{color:var(--ink-soft);margin-top:14px;font-size:1.03rem}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}.reveal.in{opacity:1;transform:none}
+.reveal[data-d="1"]{transition-delay:.08s}.reveal[data-d="2"]{transition-delay:.16s}.reveal[data-d="3"]{transition-delay:.24s}.reveal[data-d="4"]{transition-delay:.32s}
+#about{padding-top:60px}.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:start}
+.about-copy h2{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:800;margin-bottom:20px}.about-copy p{color:var(--ink-soft);font-size:1.01rem;margin-bottom:16px;max-width:58ch}
+.about-copy .pull{border-left:4px solid;border-image:var(--grad) 1;padding:6px 0 6px 20px;font-family:'Sora',sans-serif;font-weight:600;font-size:1.08rem;color:var(--ink);margin:24px 0 4px}
+.bring-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-l);padding:32px 30px;box-shadow:var(--shadow-m)}.bring-card h3{font-size:1.1rem;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.bring-list{list-style:none;display:grid;gap:16px}.bring-list li{display:flex;gap:14px;font-size:.92rem;color:var(--ink-soft)}.bring-list b{color:var(--ink);display:block;font-size:.94rem}
+.check{flex-shrink:0;width:28px;height:28px;border-radius:9px;background:var(--grad);color:#fff;display:grid;place-items:center;font-size:.8rem;font-weight:800;box-shadow:0 4px 10px rgba(51,70,110,.3);margin-top:2px}
+@media(max-width:880px){.about-grid{grid-template-columns:1fr}}
+.stats-band{background:linear-gradient(120deg,#101A3F,#1B2C6B 60%,#12224F);border-radius:var(--r-l);padding:52px 40px;color:#fff;display:grid;grid-template-columns:repeat(4,1fr);gap:30px;box-shadow:var(--shadow-l);position:relative;overflow:hidden}
+.stats-band::before{content:"";position:absolute;inset:0;background:radial-gradient(40% 90% at 15% 10%,rgba(156,122,60,.14),transparent 60%),radial-gradient(35% 80% at 90% 90%,rgba(63,92,78,.12),transparent 60%)}
+.stat{position:relative}.stat b{font-family:'Sora',sans-serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;display:block}.stat span{font-size:.86rem;color:#AEB4C4}
+@media(max-width:760px){.stats-band{grid-template-columns:repeat(2,1fr);padding:40px 28px}}
+.loop-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.loop-card{background:#fff;border:1.5px solid var(--line);border-radius:var(--r-m);padding:26px 22px;cursor:pointer;transition:all .22s ease;text-align:left;font-family:'Inter',sans-serif}
+.loop-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-m)}.loop-card.active{border-color:transparent;background:var(--grad);color:#fff;box-shadow:0 16px 40px rgba(51,70,110,.35)}
+.loop-num{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--ink-faint);display:block;margin-bottom:12px}.loop-card.active .loop-num{color:rgba(255,255,255,.75)}
+.loop-card h3{font-size:1.15rem;margin-bottom:6px}.loop-card p{font-size:.84rem;color:var(--ink-soft)}.loop-card.active p{color:rgba(255,255,255,.85)}
+.loop-desc{margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:26px 30px;box-shadow:var(--shadow-s);font-size:1rem;color:var(--ink-soft);min-height:88px;display:flex;align-items:center}.loop-desc b{color:var(--ink)}
+@media(max-width:860px){.loop-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.loop-grid{grid-template-columns:1fr}}
+#presales{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%)}.presales-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:26px}
+.ps-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:28px 24px;transition:transform .2s ease,box-shadow .2s ease;position:relative;overflow:hidden}.ps-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-m)}
+.ps-icon{width:48px;height:48px;border-radius:13px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:16px;background:var(--bg-2)}.ps-card h3{font-size:1.02rem;margin-bottom:8px}.ps-card p{font-size:.85rem;color:var(--ink-soft)}
+.sector-band{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:24px 30px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;box-shadow:var(--shadow-s)}
+.sector-band>span:first-child{font-weight:700;font-family:'Sora',sans-serif;font-size:.95rem}.sector-chip{display:inline-flex;align-items:center;gap:8px;font-size:.86rem;font-weight:600;background:var(--bg-2);border-radius:999px;padding:8px 18px}
+@media(max-width:920px){.presales-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:540px){.presales-grid{grid-template-columns:1fr}}
+.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.cap-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:30px 26px;transition:transform .22s ease,box-shadow .22s ease;position:relative;overflow:hidden}
+.cap-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.cap-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-m)}.cap-card:hover::before{transform:scaleX(1)}
+.cap-icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.4rem;margin-bottom:18px}.cap-card h3{font-size:1.13rem;margin-bottom:10px}.cap-card p{font-size:.9rem;color:var(--ink-soft);margin-bottom:16px}
+.tag-row{display:flex;flex-wrap:wrap;gap:7px}.tag{font-family:'JetBrains Mono',monospace;font-size:.68rem;padding:4px 10px;background:var(--bg-2);border-radius:6px;color:var(--ink-soft)}
+@media(max-width:900px){.cap-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.cap-grid{grid-template-columns:1fr}}
+#skills{background:linear-gradient(180deg,var(--bg-2) 0%,var(--bg) 100%)}.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.skill-col{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:26px 24px;transition:transform .2s ease,box-shadow .2s ease}.skill-col:hover{transform:translateY(-4px);box-shadow:var(--shadow-m)}
+.skill-col-head{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid var(--line)}.skill-col-head img{width:28px;height:28px;object-fit:contain}.skill-col-head h3{font-size:1rem}
+.skill-col .tag-row{gap:8px}.skill-col .tag{font-size:.72rem;padding:6px 12px}
+@media(max-width:900px){.skill-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:580px){.skill-grid{grid-template-columns:1fr}}
+.eng-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.eng-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:24px 20px;text-align:center;transition:transform .2s ease,box-shadow .2s ease}.eng-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-m)}
+.eng-card .em{font-size:1.5rem;display:block;margin-bottom:10px}.eng-card b{font-family:'Sora',sans-serif;font-size:.92rem;display:block;margin-bottom:6px}.eng-card p{font-size:.78rem;color:var(--ink-soft)}
+@media(max-width:920px){.eng-strip{grid-template-columns:repeat(2,1fr)}.eng-strip .eng-card:last-child{grid-column:1/-1}}
+.filter-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:44px}
+.fbtn{font-family:'Inter',sans-serif;font-size:.86rem;font-weight:600;padding:9px 20px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer;transition:all .18s ease}
+.fbtn:hover{border-color:var(--blue);color:var(--blue-deep)}.fbtn.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.pcard{background:#fff;border:1px solid var(--line);border-radius:var(--r-l);overflow:hidden;transition:transform .25s ease,box-shadow .25s ease;display:flex;flex-direction:column}.pcard:hover{transform:translateY(-7px);box-shadow:var(--shadow-l)}.pcard.hide{display:none}
+.pcard-top{padding:30px 30px 26px;color:#fff;position:relative;overflow:hidden;min-height:140px;display:flex;flex-direction:column;justify-content:flex-end}
+.pcard-top::after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;right:-60px;top:-80px;background:rgba(255,255,255,.14)}.pcard-top::before{content:"";position:absolute;width:130px;height:130px;border-radius:50%;right:60px;top:-70px;background:rgba(255,255,255,.1)}
+.pt-blue{background:linear-gradient(130deg,#33466E,#1E2C4A)}.pt-violet{background:linear-gradient(130deg,#57506E,#38334A)}.pt-teal{background:linear-gradient(130deg,#3F5C4E,#263830)}.pt-amber{background:linear-gradient(130deg,#9C7A3C,#6B5225)}
+.pcard-domain{font-family:'JetBrains Mono',monospace;font-size:.72rem;opacity:.85;margin-bottom:8px}.pcard-top h3{font-size:1.4rem;font-weight:700;position:relative;z-index:1}
+.pcard-body{padding:26px 30px 28px;display:flex;flex-direction:column;gap:16px;flex:1}.pcard-body p{font-size:.93rem;color:var(--ink-soft)}.pcard .tag-row{margin-top:auto}
+.result-pill{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:700;color:var(--blue-deep);background:#E8EAEF;padding:9px 16px;border-radius:10px;align-self:flex-start}
+.pcard.wide{grid-column:1/-1}.pcard.wide .pcard-body{display:grid;grid-template-columns:1fr 1fr;gap:30px}.pcard.wide .pcol2{display:flex;flex-direction:column;gap:16px}
+.arch-list{list-style:none;display:grid;gap:10px}.arch-list li{font-size:.87rem;color:var(--ink-soft);padding-left:26px;position:relative}.arch-list li::before{content:"▸";position:absolute;left:6px;color:var(--violet);font-weight:700}.arch-list b{color:var(--ink)}
+.arch-diagram{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-s);padding:16px;margin-top:4px}.arch-diagram svg{width:100%;height:auto;display:block}.arch-diagram .cap{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--ink-faint);margin-bottom:8px}
+.ad-box{fill:#fff;stroke:var(--line);stroke-width:1.2}.ad-box-hl{fill:#E8EAEF;stroke:var(--blue)}.ad-box-agent{fill:#EAE8ED;stroke:var(--violet)}.ad-box-out{fill:#E6EBE8;stroke:var(--teal)}
+.ad-txt{font-family:'Inter',sans-serif;font-size:9.5px;fill:var(--ink);font-weight:600}.ad-sub{font-family:'JetBrains Mono',monospace;font-size:7.5px;fill:var(--ink-faint);font-weight:400}.ad-line{stroke:#B7BAC4;stroke-width:1.2;fill:none;marker-end:url(#arr)}
+@media(max-width:840px){.proj-grid{grid-template-columns:1fr}.pcard.wide .pcard-body{grid-template-columns:1fr}}
+.xp-wrap{max-width:780px;margin:0 auto;position:relative}.xp-wrap::before{content:"";position:absolute;left:24px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--blue),var(--violet),var(--teal),var(--amber));border-radius:2px}
+.xp-item{position:relative;padding:0 0 44px 72px}.xp-item:last-child{padding-bottom:0}
+.xp-dot{position:absolute;left:13px;top:6px;width:24px;height:24px;border-radius:50%;background:#fff;border:3px solid var(--blue);display:grid;place-items:center;box-shadow:0 0 0 5px rgba(51,70,110,.14)}.xp-dot::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--blue)}
+.xp-item:nth-child(2) .xp-dot{border-color:var(--violet);box-shadow:0 0 0 5px rgba(87,80,110,.14)}.xp-item:nth-child(2) .xp-dot::after{background:var(--violet)}
+.xp-item:nth-child(3) .xp-dot{border-color:var(--teal);box-shadow:0 0 0 5px rgba(63,92,78,.14)}.xp-item:nth-child(3) .xp-dot::after{background:var(--teal)}
+.xp-item:nth-child(4) .xp-dot{border-color:var(--amber);box-shadow:0 0 0 5px rgba(156,122,60,.14)}.xp-item:nth-child(4) .xp-dot::after{background:var(--amber)}
+.xp-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:28px 30px;box-shadow:var(--shadow-s);transition:box-shadow .2s ease,transform .2s ease}.xp-card:hover{box-shadow:var(--shadow-m);transform:translateX(4px)}
+.xp-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:14px}.xp-role{font-family:'Sora',sans-serif;font-weight:700;font-size:1.15rem}.xp-org{color:var(--blue-deep);font-weight:600;font-size:.93rem;margin-top:2px}
+.xp-date{font-family:'JetBrains Mono',monospace;font-size:.74rem;color:var(--ink-soft);background:var(--bg-2);padding:6px 12px;border-radius:8px;white-space:nowrap}
+.xp-card ul{list-style:none;display:grid;gap:9px}.xp-card li{font-size:.9rem;color:var(--ink-soft);padding-left:22px;position:relative}.xp-card li::before{content:"✦";position:absolute;left:2px;color:var(--teal);font-size:.7rem;top:4px}
+#credentials{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);padding-top:70px}.cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:26px}
+.cred-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:26px 24px;display:flex;gap:16px;align-items:flex-start;transition:transform .2s ease,box-shadow .2s ease}.cred-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-m)}
+.cred-logo{width:46px;height:46px;border-radius:12px;background:var(--bg-2);display:grid;place-items:center;flex-shrink:0}.cred-logo img,.cred-logo svg{width:26px;height:26px;object-fit:contain}
+.cred-card b{font-size:.92rem;display:block;line-height:1.35}.cred-card span{font-size:.8rem;color:var(--ink-faint)}
+.edu-band{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:28px 32px;display:flex;align-items:center;gap:22px;box-shadow:var(--shadow-s);flex-wrap:wrap}.edu-icon{width:56px;height:56px;border-radius:16px;background:var(--grad);display:grid;place-items:center;font-size:1.6rem;flex-shrink:0}
+@media(max-width:860px){.cred-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.cred-grid{grid-template-columns:1fr}}
+.rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rec-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-l);overflow:hidden;box-shadow:var(--shadow-s);transition:transform .22s ease,box-shadow .22s ease;display:flex;flex-direction:column}.rec-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-m)}
+.rec-top{width:100%;aspect-ratio:4/3;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:8px;padding:26px;color:#fff;position:relative;overflow:hidden}
+.rec-top::after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-50px;top:-60px;background:rgba(255,255,255,.14)}.rec-top .rec-icon{font-size:2rem;position:relative;z-index:1}.rec-top .rec-top-label{font-family:'JetBrains Mono',monospace;font-size:.74rem;opacity:.9;position:relative;z-index:1}
+.rec-body{padding:22px 22px 26px;display:flex;flex-direction:column;gap:10px;flex:1}.rec-tag{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--blue-deep);font-weight:700}.rec-body h3{font-size:1.05rem;font-weight:700}.rec-body p{font-size:.87rem;color:var(--ink-soft);flex:1}
+.rec-stat{display:inline-flex;align-self:flex-start;gap:6px;font-size:.82rem;font-weight:700;color:var(--blue-deep);background:#E8EAEF;padding:8px 14px;border-radius:9px;margin-top:4px}
+@media(max-width:900px){.rec-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.rec-grid{grid-template-columns:1fr}}
+#contact{padding-bottom:60px}.contact-band{background:linear-gradient(125deg,#101A3F,#1E2F6E 55%,#122240);border-radius:var(--r-l);padding:70px 50px;color:#fff;position:relative;overflow:hidden;box-shadow:var(--shadow-l);text-align:center}
+.contact-band::before{content:"";position:absolute;inset:0;background:radial-gradient(45% 90% at 85% 15%,rgba(156,122,60,.16),transparent 60%),radial-gradient(40% 80% at 10% 90%,rgba(63,92,78,.14),transparent 60%)}
+.contact-inner{position:relative;max-width:640px;margin:0 auto}.contact-inner h2{font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:800}.contact-inner .sub{color:#C4C8D4;margin-top:16px;font-size:1.05rem}
+.email-hero{margin:36px auto 0;display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:14px 14px 14px 26px;max-width:560px;flex-wrap:wrap}
+.email-hero .addr{font-family:'JetBrains Mono',monospace;font-size:clamp(.85rem,2.4vw,1.05rem);font-weight:500}.email-actions{display:flex;gap:10px}.btn-white{background:#fff;color:var(--ink)}
+.contact-foot{margin-top:30px;display:flex;justify-content:center;gap:22px;flex-wrap:wrap;font-size:.9rem;color:#B3B7C6}.contact-foot a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;color:#fff}.contact-foot a:hover{text-decoration:underline}.contact-foot img{width:18px;height:18px}
+@media(max-width:600px){.contact-band{padding:50px 24px}.email-hero{justify-content:center}}
+footer{padding:36px 0 44px;text-align:center;color:var(--ink-faint);font-size:.85rem}footer .foot-brand{font-family:'Sora',sans-serif;font-weight:700;color:var(--ink);font-size:1rem;display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:8px}footer .foot-brand .brand-logo{width:28px;height:28px;border-radius:8px;font-size:.75rem}
+#toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(90px);background:var(--ink);color:#fff;padding:12px 24px;border-radius:12px;font-size:.9rem;font-weight:500;box-shadow:var(--shadow-l);transition:transform .3s ease;z-index:300}#toast.show{transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<nav id="nav">
+  <a href="#top" class="brand"><span class="brand-logo">HG</span>Harsh Goyal</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li><li><a href="#presales">Presales</a></li><li><a href="#capabilities">Capabilities</a></li><li><a href="#skills">Skills</a></li><li><a href="#work">Work</a></li><li><a href="#experience">Experience</a></li><li><a href="#recognition">Recognition</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:hg329558@gmail.com" class="nav-cta">✉ Email me</a>
+  <button id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<main id="top">
+
+<section class="hero">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div>
+      <div class="hero-badge"><span class="pulse-dot"></span> Open to AI Platform &amp; Cloud Architecture leadership roles</div>
+      <h1>Hi, I'm Harsh.<br>I design &amp; build<span class="type-wrap"><span id="typed"></span></span></h1>
+      <p class="lede">The platforms enterprises run their AI on — landing zones, governance, DevSecOps and the agentic layer on top, delivered end to end for government, BFSI, healthcare and education across the Gulf and India. The architecture and the code that ships it are usually both mine.</p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-grad">Explore my work ↓</a>
+        <a href="mailto:hg329558@gmail.com" class="btn btn-line">✉ Email me</a>
+      </div>
+      <div class="hero-mini-stats">
+        <div class="hms"><b class="grad-text">6+ yrs</b><span>Cloud, DevSecOps &amp; AI delivery</span></div>
+        <div class="hms"><b class="grad-text">4 clouds</b><span>Azure · AWS · GCP · OCI, production</span></div>
+        <div class="hms"><b class="grad-text">50+ engineers</b><span>Led on a single program</span></div>
+        <div class="hms"><b class="grad-text">8 certs</b><span>Microsoft · AWS · Google · Anthropic</span></div>
+      </div>
+    </div>
+    <div class="photo-col">
+      <div class="photo-card">
+        <div class="photo-frame" id="photoFrame">
+          <img id="photoImg" src="profile-photo.png" alt="Harsh Goyal">
+          <div class="photo-ph"><div class="avatar">HG</div><p>Harsh Goyal</p><span class="mono">abu dhabi, uae</span></div>
+        </div>
+        <div class="photo-caption"><b>Harsh Goyal</b><span>AI Platform &amp; Cloud Architect</span></div>
+        <div class="float-chip chip-1"><img class="logo" data-l="AZ" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt="Azure">Azure OpenAI</div>
+        <div class="float-chip chip-2"><img class="logo" data-l="TF" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" alt="Terraform">Terraform · GitOps</div>
+        <div class="float-chip chip-3"><img class="logo" data-l="AI" src="https://cdn.simpleicons.org/anthropic/191919" alt="Anthropic">Agentic · MCP</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-sec">
+  <div class="marquee-label">The stack I ship with, every week</div>
+  <div class="marquee"><div class="marquee-track" id="marqueeTrack">
+    <div class="logo-pill"><img class="logo" data-l="AZ" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt="">Microsoft Azure</div>
+    <div class="logo-pill"><img class="logo" data-l="AWS" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="">AWS</div>
+    <div class="logo-pill"><img class="logo" data-l="GC" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" alt="">Google Cloud</div>
+    <div class="logo-pill"><img class="logo" data-l="TF" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" alt="">Terraform</div>
+    <div class="logo-pill"><img class="logo" data-l="K8" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg" alt="">Kubernetes (AKS · EKS)</div>
+    <div class="logo-pill"><img class="logo" data-l="DK" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="">Docker</div>
+    <div class="logo-pill"><img class="logo" data-l="GH" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="">GitHub Actions</div>
+    <div class="logo-pill"><img class="logo" data-l="AD" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuredevops/azuredevops-original.svg" alt="">Azure DevOps</div>
+    <div class="logo-pill"><img class="logo" data-l="AI" src="https://cdn.simpleicons.org/anthropic/191919" alt="">Claude · MCP</div>
+    <div class="logo-pill"><img class="logo" data-l="OA" src="https://api.iconify.design/logos/openai-icon.svg" alt="">Azure OpenAI</div>
+    <div class="logo-pill"><img class="logo" data-l="PY" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="">Python</div>
+    <div class="logo-pill"><img class="logo" data-l="PS" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/powershell/powershell-original.svg" alt="">PowerShell</div>
+    <div class="logo-pill"><img class="logo" data-l="AN" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ansible/ansible-original.svg" alt="">Ansible</div>
+    <div class="logo-pill"><img class="logo" data-l="DB" src="https://cdn.simpleicons.org/databricks/FF3621" alt="">Databricks</div>
+    <div class="logo-pill"><img class="logo" data-l="PG" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="">PostgreSQL</div>
+  </div></div>
+</div>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-copy reveal">
+      <span class="eyebrow">👋 About me</span>
+      <h2>Capability outruns trust. <span class="grad-text">I build the part that closes the gap.</span></h2>
+      <p>I'm a hands-on cloud and AI platform architect who also leads delivery. Most of my work sits where autonomous systems meet production estates: multi-agent orchestration, tool boundaries, prompt guardrails, approval-gated remediation, and the audit trails that make any of it acceptable to a regulator.</p>
+      <p>I've designed and built cloud foundations for MOHESR, HCT, Alef Education and Agthia, migrated 500+ Kubernetes workloads to Azure, and shipped three platforms of my own: CloudOps360, an enterprise AI governance framework, and multi-cloud AI-SRE agents for Princess Cruise Lines.</p>
+      <div class="pull">"Equally comfortable in a ministry steering committee and in the Terraform that runs their landing zone."</div>
+    </div>
+    <div class="bring-card reveal" data-d="1">
+      <h3>🎒 What I bring to an engagement</h3>
+      <ul class="bring-list">
+        <li><span class="check">✓</span><div><b>Foundations built right, once</b>Landing zones on Azure, AWS and GCP aligned to the Cloud Adoption Framework — identity, network, policy and platform automation as one system.</div></li>
+        <li><span class="check">✓</span><div><b>Agents that can be trusted in production</b>Tool boundaries, constrained permissions, human approval gates and full audit trails — autonomy you can defend to a regulator.</div></li>
+        <li><span class="check">✓</span><div><b>I write the code, not just the decks</b>Full-stack contributions across API, identity and frontend on the platforms I architect. Terraform, Python, PowerShell, GitHub Actions.</div></li>
+        <li><span class="check">✓</span><div><b>Presales to go-live, same person</b>50+ bids won partnering with CEO and sales leadership; then leading 50+ engineers to deliver what was sold.</div></li>
+        <li><span class="check">✓</span><div><b>Measurable outcomes</b>500+ K8s workloads migrated at ~25–30% lower cost; deployments 3–5× faster; 120+ monoliths modernised for a national airline.</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px;padding-bottom:60px;"><div class="wrap">
+  <div class="stats-band reveal">
+    <div class="stat"><b>500+</b><span>Kubernetes workloads migrated to Azure</span></div>
+    <div class="stat"><b>~25–30%</b><span>Infrastructure cost reduction on that estate</span></div>
+    <div class="stat"><b>3–5×</b><span>Faster deployments via DevSecOps automation</span></div>
+    <div class="stat"><b>50+</b><span>Project bids won in a single year</span></div>
+  </div>
+</div></section>
+
+<section id="loop" style="padding-top:30px;"><div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow">⚙ How I work</span><h2>Landing zone to <span class="grad-text">autonomous operations</span></h2><p>Every engagement runs through the same loop. Click a stage to see what happens inside it.</p></div>
+  <div class="loop-grid reveal" data-d="1">
+    <button class="loop-card active" data-i="0"><span class="loop-num">01</span><h3>Design</h3><p>Foundation + AI layer</p></button>
+    <button class="loop-card" data-i="1"><span class="loop-num">02</span><h3>Secure</h3><p>Zero Trust, identity, policy</p></button>
+    <button class="loop-card" data-i="2"><span class="loop-num">03</span><h3>Automate</h3><p>Terraform, GitOps, CI/CD</p></button>
+    <button class="loop-card" data-i="3"><span class="loop-num">04</span><h3>Operate</h3><p>Agents + evidence</p></button>
+  </div>
+  <div class="loop-desc reveal" data-d="2" id="loopDesc"></div>
+</div></section>
+
+<section id="presales"><div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow">💼 Presales &amp; solutioning</span><h2>I win the work <span class="grad-text">before I build it</span></h2><p>Solution design and the commercial side of architecture are the first half of every delivery, not a separate team.</p></div>
+  <div class="presales-grid">
+    <div class="ps-card reveal"><div class="ps-icon">🧭</div><h3>Target architectures</h3><p>Landing zones, migration roadmaps and AI platform designs sized to the client's real estate, regulator and budget.</p></div>
+    <div class="ps-card reveal" data-d="1"><div class="ps-icon">📄</div><h3>RFP / RFI responses</h3><p>Authored proposals and technical demos tying the solution to executive outcomes — written by the person who'll build it.</p></div>
+    <div class="ps-card reveal" data-d="2"><div class="ps-icon">🧾</div><h3>Effort &amp; estimation</h3><p>Implementation plans, FTE-based effort models and bills of materials, not hand-wavy estimates.</p></div>
+    <div class="ps-card reveal" data-d="3"><div class="ps-icon">🎬</div><h3>Working PoCs &amp; demos</h3><p>CloudOps360 and agentic PoCs demonstrated live against the prospect's own problem. This is usually what wins.</p></div>
+  </div>
+  <div class="sector-band reveal" data-d="2"><span>Sold &amp; delivered into:</span><span class="sector-chip">🏛 Government</span><span class="sector-chip">🎓 Education</span><span class="sector-chip">🏦 BFSI</span><span class="sector-chip">🏥 Healthcare</span><span class="sector-chip">🚢 Travel &amp; Hospitality</span><span class="sector-chip">✈️ Aviation</span></div>
+</div></section>
+
+<section id="capabilities"><div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow">🧠 Capabilities</span><h2>Six areas I own <span class="grad-text">end to end</span></h2><p>From the first landing zone through to agents running inside your estate.</p></div>
+  <div class="cap-grid">
+    <div class="cap-card reveal"><div class="cap-icon" style="background:#E8EAEF;">🤖</div><h3>Agentic AI platforms</h3><p>Multi-agent orchestration, tool boundaries, guardrails, approval gates and audit trails. Autonomous SRE and cloud operations that regulators accept.</p><div class="tag-row"><span class="tag">MCP</span><span class="tag">Azure OpenAI</span><span class="tag">Claude</span><span class="tag">approval gates</span></div></div>
+    <div class="cap-card reveal" data-d="1"><div class="cap-icon" style="background:#EAE8ED;">🛡</div><h3>AI governance</h3><p>Multi-tenant governance frameworks: AI-scored assessment, server-side verification of model output, versioned contracts, immutable audit.</p><div class="tag-row"><span class="tag">RBAC</span><span class="tag">audit log</span><span class="tag">versioned scoring</span><span class="tag">config-not-code</span></div></div>
+    <div class="cap-card reveal" data-d="2"><div class="cap-icon" style="background:#E6EBE8;">☁️</div><h3>Cloud foundations</h3><p>Enterprise landing zones on Azure, AWS and GCP. Cloud Adoption Framework, hybrid and multi-tenant, migration at national scale.</p><div class="tag-row"><span class="tag">CAF</span><span class="tag">Landing Zones</span><span class="tag">Azure · AWS · GCP</span><span class="tag">OCI</span></div></div>
+    <div class="cap-card reveal"><div class="cap-icon" style="background:#F1EADA;">⚙️</div><h3>DevSecOps &amp; platform engineering</h3><p>Terraform, GitOps, CI/CD, Kubernetes at scale, policy-as-code and secure-by-default patterns.</p><div class="tag-row"><span class="tag">Terraform</span><span class="tag">GitHub Actions</span><span class="tag">AKS · EKS</span><span class="tag">policy-as-code</span></div></div>
+    <div class="cap-card reveal" data-d="1"><div class="cap-icon" style="background:#E8EAEF;">🔐</div><h3>Cloud security</h3><p>Zero Trust, Entra ID, Sentinel, Defender, WAF and SOC integration. Security designed in from the landing zone, not bolted on.</p><div class="tag-row"><span class="tag">Zero Trust</span><span class="tag">Entra ID</span><span class="tag">Sentinel</span><span class="tag">Defender</span></div></div>
+    <div class="cap-card reveal" data-d="2"><div class="cap-icon" style="background:#EAE8ED;">🔌</div><h3>Integration &amp; API platforms</h3><p>Azure API Management across dev/test/prod — policies, products, lifecycle — including APIM as an AI gateway in front of Azure OpenAI.</p><div class="tag-row"><span class="tag">APIM</span><span class="tag">OpenAPI</span><span class="tag">Bicep</span><span class="tag">AI gateway</span></div></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow">🛠 Technical skills</span><h2>The full <span class="grad-text">toolbox</span></h2><p>Everything below has shipped in production; nothing listed for decoration.</p></div>
+  <div class="skill-grid">
+    <div class="skill-col reveal"><div class="skill-col-head"><img class="logo" data-l="AZ" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt=""><h3>Azure</h3></div><div class="tag-row"><span class="tag">Landing Zones (CAF)</span><span class="tag">AKS</span><span class="tag">API Management</span><span class="tag">Azure OpenAI</span><span class="tag">Entra ID · PIM</span><span class="tag">Azure Policy</span><span class="tag">Sentinel · Defender</span><span class="tag">Key Vault</span><span class="tag">Functions</span><span class="tag">Azure Monitor</span></div></div>
+    <div class="skill-col reveal" data-d="1"><div class="skill-col-head"><img class="logo" data-l="AWS" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt=""><h3>AWS &amp; Google Cloud</h3></div><div class="tag-row"><span class="tag">Multi-account landing zones</span><span class="tag">EKS</span><span class="tag">IAM</span><span class="tag">CloudWatch</span><span class="tag">CloudFormation</span><span class="tag">GCP org &amp; Shared VPC</span><span class="tag">GKE</span><span class="tag">OCI</span></div></div>
+    <div class="skill-col reveal" data-d="2"><div class="skill-col-head"><img class="logo" data-l="TF" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" alt=""><h3>IaC &amp; DevSecOps</h3></div><div class="tag-row"><span class="tag">Terraform</span><span class="tag">OpenTofu</span><span class="tag">Bicep</span><span class="tag">GitHub Actions</span><span class="tag">Azure DevOps</span><span class="tag">GitOps</span><span class="tag">Ansible</span><span class="tag">policy-as-code</span><span class="tag">CI/CD security gates</span></div></div>
+    <div class="skill-col reveal"><div class="skill-col-head"><img class="logo" data-l="AI" src="https://cdn.simpleicons.org/anthropic/191919" alt=""><h3>AI &amp; agentic systems</h3></div><div class="tag-row"><span class="tag">Multi-agent orchestration</span><span class="tag">Model Context Protocol</span><span class="tag">Azure OpenAI</span><span class="tag">Claude</span><span class="tag">LLMs · RAG</span><span class="tag">Guardrails &amp; evaluation</span><span class="tag">AI governance</span><span class="tag">Agentic SRE</span></div></div>
+    <div class="skill-col reveal" data-d="1"><div class="skill-col-head"><img class="logo" data-l="PY" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt=""><h3>Engineering</h3></div><div class="tag-row"><span class="tag">Python</span><span class="tag">PowerShell</span><span class="tag">Azure CLI</span><span class="tag">TypeScript</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">PostgreSQL</span><span class="tag">REST · OpenAPI</span></div></div>
+    <div class="skill-col reveal" data-d="2"><div class="skill-col-head"><img class="logo" data-l="DB" src="https://cdn.simpleicons.org/databricks/FF3621" alt=""><h3>Data &amp; security</h3></div><div class="tag-row"><span class="tag">Databricks</span><span class="tag">Synapse</span><span class="tag">Fabric</span><span class="tag">Power BI</span><span class="tag">Zero Trust</span><span class="tag">WAF · SOC</span><span class="tag">FinOps</span><span class="tag">SAP on cloud</span></div></div>
+  </div>
+</div></section>
+
+<section style="padding-top:70px;padding-bottom:70px;"><div class="wrap">
+  <div class="sec-head reveal" style="margin-bottom:40px;"><span class="eyebrow">⚡ Engineering highlights</span><h2>Numbers I <span class="grad-text">stand behind</span></h2></div>
+  <div class="eng-strip">
+    <div class="eng-card reveal"><span class="em">📦</span><b>Scale</b><p>500+ Kubernetes workloads migrated to Azure on one program</p></div>
+    <div class="eng-card reveal" data-d="1"><span class="em">💸</span><b>Cost</b><p>~25–30% infrastructure cost reduction through rightsizing and optimisation</p></div>
+    <div class="eng-card reveal" data-d="2"><span class="em">🚀</span><b>Velocity</b><p>Deployments 3–5× faster with Terraform and CI/CD automation</p></div>
+    <div class="eng-card reveal" data-d="3"><span class="em">🏗</span><b>Modernisation</b><p>120+ monolithic apps moved to PaaS/SaaS for India's largest airline</p></div>
+    <div class="eng-card reveal" data-d="4"><span class="em">🛡</span><b>Guardrails</b><p>Snapshot-protected, approval-gated auto-remediation on every autonomous action</p></div>
+  </div>
+</div></section>
+
+<section id="work" style="padding-top:40px;"><div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow">🚀 Selected work</span><h2>Platforms I've designed <span class="grad-text">&amp; delivered</span></h2><p>Production systems inside client estates — under real identity, real governance, real regulators.</p></div>
+  <div class="filter-row reveal">
+    <button class="fbtn active" data-f="all">All</button><button class="fbtn" data-f="ai">AI platforms</button><button class="fbtn" data-f="cloud">Cloud foundations</button><button class="fbtn" data-f="oss">Open source</button>
+  </div>
+  <div class="proj-grid">
+    <article class="pcard wide reveal" data-cat="ai">
+      <div class="pcard-top pt-blue"><div class="pcard-domain">SIGNATURE PLATFORM · MULTI-CLOUD · ROLE: ARCHITECTURE, DESIGN &amp; BUILD</div><h3>CloudOps360 — autonomous cloud operations</h3></div>
+      <div class="pcard-body">
+        <div>
+          <p><b style="color:var(--ink);">The problem.</b> Cloud operations ran on tickets and people: an alert fired, an engineer read it, decided, and typed the fix. Remediation cycles took days and every action was an unlogged judgement call.</p>
+          <p style="margin-top:12px;"><b style="color:var(--ink);">The design call.</b> Let AI analyse and propose, never act unsupervised. Every remediation is snapshot-protected and approval-gated, every step is audited, and the same control plane covers inventory, policy and compliance, security, patch management and natural-language-to-Terraform provisioning across Azure and AWS.</p>
+          <ul class="arch-list" style="margin-top:16px;"><li><b>Control plane:</b> unified estate visibility, compliance state, security posture and patch status</li><li><b>Remediation loop:</b> Alert → AI analysis → decision → human approval → remediate → validate → audit</li><li><b>Provisioning:</b> natural language to Terraform, reviewed before apply</li><li><b>Identity:</b> Entra-authenticated API, scoped admin roles, per-tenant isolation</li></ul>
+          <div class="result-pill" style="margin-top:18px;">⚡ Remediation cycles compressed from days to hours · every action explainable</div>
+        </div>
+        <div class="pcol2">
+          <div class="arch-diagram"><div class="cap">// remediation loop: approval-gated autonomy</div>
+            <svg viewBox="0 0 460 268" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CloudOps360 architecture">
+              <defs><marker id="arr" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#B7BAC4" stroke-width="1.2"/></marker></defs>
+              <rect class="ad-box" x="8" y="10" width="136" height="34" rx="6"/><text class="ad-txt" x="76" y="26" text-anchor="middle">Azure estate</text><text class="ad-sub" x="76" y="38" text-anchor="middle">policy · defender · monitor</text>
+              <rect class="ad-box" x="162" y="10" width="136" height="34" rx="6"/><text class="ad-txt" x="230" y="26" text-anchor="middle">AWS estate</text><text class="ad-sub" x="230" y="38" text-anchor="middle">multi-account · cloudwatch</text>
+              <rect class="ad-box" x="316" y="10" width="136" height="34" rx="6"/><text class="ad-txt" x="384" y="26" text-anchor="middle">Alerts &amp; findings</text><text class="ad-sub" x="384" y="38" text-anchor="middle">signals in</text>
+              <path class="ad-line" d="M76,44 L76,62 L225,62 L225,70"/><path class="ad-line" d="M230,44 L230,70"/><path class="ad-line" d="M384,44 L384,62 L235,62 L235,70"/>
+              <rect class="ad-box ad-box-hl" x="70" y="72" width="320" height="32" rx="6"/><text class="ad-txt" x="230" y="88" text-anchor="middle">CloudOps360 control plane</text><text class="ad-sub" x="230" y="99" text-anchor="middle">inventory · policy &amp; compliance · security · patch</text>
+              <path class="ad-line" d="M230,104 L230,120"/>
+              <rect class="ad-box ad-box-agent" x="14" y="122" width="432" height="76" rx="8"/><text class="ad-sub" x="26" y="136">AI LAYER · ANALYSE AND PROPOSE, NEVER ACT ALONE</text>
+              <rect class="ad-box" x="26" y="144" width="94" height="40" rx="6"/><text class="ad-txt" x="73" y="167" text-anchor="middle">AI analysis</text>
+              <rect class="ad-box" x="130" y="144" width="94" height="40" rx="6"/><text class="ad-txt" x="177" y="162" text-anchor="middle">Proposed</text><text class="ad-txt" x="177" y="174" text-anchor="middle">action</text>
+              <rect class="ad-box" x="234" y="144" width="94" height="40" rx="6"/><text class="ad-txt" x="281" y="162" text-anchor="middle">Human</text><text class="ad-txt" x="281" y="174" text-anchor="middle">approval</text>
+              <rect class="ad-box" x="338" y="144" width="94" height="40" rx="6"/><text class="ad-txt" x="385" y="162" text-anchor="middle">Snapshot +</text><text class="ad-txt" x="385" y="174" text-anchor="middle">remediate</text>
+              <path class="ad-line" d="M230,198 L230,214"/>
+              <rect class="ad-box ad-box-out" x="70" y="216" width="320" height="34" rx="6"/><text class="ad-txt" x="230" y="232" text-anchor="middle">Validate · audit trail · rollback on failure</text><text class="ad-sub" x="230" y="244" text-anchor="middle">every action explainable to an auditor</text>
+            </svg>
+          </div>
+          <div class="tag-row"><span class="tag">Azure</span><span class="tag">AWS</span><span class="tag">Terraform</span><span class="tag">Python</span><span class="tag">Entra ID</span><span class="tag">Azure OpenAI</span><span class="tag">React</span></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="pcard reveal" data-cat="ai"><div class="pcard-top pt-violet"><div class="pcard-domain">TRAVEL &amp; HOSPITALITY · PRINCESS CRUISE LINES · AWS</div><h3>Multi-cloud AI-SRE agents</h3></div>
+      <div class="pcard-body"><p>Agentic SRE layer for Princess Cruise Lines' multi-account AWS estate: autonomous signal triage, root-cause analysis and proposed remediation with human-in-the-loop approval — shaped to the client's existing e-mail-driven operating model rather than forcing a new one. Constrained agent permissions, snapshot protection, full audit trail.</p><div class="result-pill">🤖 Signal → triage → RCA → approval → remediate → audit</div><div class="tag-row"><span class="tag">AWS</span><span class="tag">Multi-agent</span><span class="tag">Approval gates</span><span class="tag">Python</span></div></div></article>
+
+    <article class="pcard reveal" data-d="1" data-cat="ai"><div class="pcard-top pt-teal"><div class="pcard-domain">ENTERPRISE · XEBIA · AI GOVERNANCE</div><h3>Enterprise AI governance framework</h3></div>
+      <div class="pcard-body"><p>Multi-tenant platform for governed AI adoption across service lines: AI-scored maturity assessment with no human scoring, every score re-verified server-side, versioned scoring contracts and pinned model versions, least-privilege RBAC and an immutable audit trail. New business units onboard by configuration, not code.</p><div class="result-pill">🛡 Config-not-code onboarding · immutable audit on every score</div><div class="tag-row"><span class="tag">Claude</span><span class="tag">NestJS</span><span class="tag">PostgreSQL</span><span class="tag">Entra ID</span><span class="tag">AKS</span></div></div></article>
+
+    <article class="pcard reveal" data-cat="cloud"><div class="pcard-top pt-blue"><div class="pcard-domain">EDUCATION · ALEF EDUCATION · AZURE</div><h3>Landing zone + AWS→Azure migration</h3></div>
+      <div class="pcard-body"><p>On-site design of an enterprise-scale Azure landing zone and lead on the AWS-to-Azure migration for Alef's EdTech platform — Terraform and OpenTofu with GitHub Actions, AKS, high-availability multi-region topology, AI-ready by design.</p><div class="result-pill">📦 500+ K8s workloads · ~25–30% lower cost · 3–5× faster deploys</div><div class="tag-row"><span class="tag">Azure</span><span class="tag">AKS</span><span class="tag">Terraform</span><span class="tag">GitHub Actions</span></div></div></article>
+
+    <article class="pcard reveal" data-d="1" data-cat="cloud"><div class="pcard-top pt-amber"><div class="pcard-domain">GOVERNMENT · MOHESR · HCT · AGTHIA · AZURE</div><h3>Cloud transformation &amp; API platforms</h3></div>
+      <div class="pcard-body"><p>Architecture, migration and governance programs for UAE government and enterprise — landing zones, Zero Trust security baselines, and Azure API Management across dev/test/prod for MOHESR and HCT: policies, products, subscriptions, versions and revisions, deployed via Bicep and Terraform.</p><div class="result-pill">🏛 Regulated estates · APIM lifecycle as code</div><div class="tag-row"><span class="tag">Azure</span><span class="tag">APIM</span><span class="tag">Bicep</span><span class="tag">Zero Trust</span></div></div></article>
+
+    <article class="pcard reveal" data-cat="ai"><div class="pcard-top pt-violet"><div class="pcard-domain">AI GATEWAY · CITADEL ARC · AZURE OPENAI</div><h3>APIM as an AI gateway</h3></div>
+      <div class="pcard-body"><p>Azure API Management in front of Azure OpenAI and model endpoints — authentication, token-aware throttling, request/response transformation, caching and usage analytics — so application teams consume AI through governed, observable APIs instead of raw keys.</p><div class="result-pill">🔌 Governed AI consumption · usage visible per product</div><div class="tag-row"><span class="tag">APIM</span><span class="tag">Azure OpenAI</span><span class="tag">OAuth2/JWT</span><span class="tag">App Insights</span></div></div></article>
+
+    <article class="pcard reveal" data-d="1" data-cat="cloud"><div class="pcard-top pt-teal"><div class="pcard-domain">NATIONAL SCALE · ONDC · PROTEAN EGOV · MULTI-CLOUD</div><h3>ONDC network &amp; multi-cloud landing zone</h3></div>
+      <div class="pcard-body"><p>Organization-wide GCP, Azure and AWS landing zone and design lead for ONDC — one of India's largest digital commerce networks. 40+ nationally used applications built, secured and operated on Kubernetes with automated CI/CD, Prometheus/Grafana observability and MOSIP identity integration.</p><div class="result-pill">🇮🇳 40+ national applications · 15+ engineer team</div><div class="tag-row"><span class="tag">GCP</span><span class="tag">Kubernetes</span><span class="tag">Prometheus</span><span class="tag">MOSIP</span></div></div></article>
+
+    <article class="pcard reveal" data-cat="oss"><div class="pcard-top pt-blue"><div class="pcard-domain">OPEN SOURCE · MIT · <a href="https://github.com/harshgoyal1/audit-truth" style="color:#fff;">github.com/harshgoyal1/audit-truth</a></div><h3>audit-truth</h3></div>
+      <div class="pcard-body"><p>Can your agent's logs prove what it did? A review skill mapping AI-agent and MCP logging to NIST SP 800-53 AU, ISO 27001, SOC 2 and the OWASP Agentic Top 10 — six auditor questions, code-level recognisers for every gap, and a suggested <span class="mono">audit.*</span> record namespace.</p><div class="result-pill">📋 Verified against primary sources in two adversarial review rounds</div><div class="tag-row"><span class="tag">NIST AU</span><span class="tag">ISO 27001</span><span class="tag">SOC 2</span><span class="tag">OTel GenAI</span><span class="tag">MCP</span></div></div></article>
+
+    <article class="pcard reveal" data-d="1" data-cat="oss"><div class="pcard-top pt-teal"><div class="pcard-domain">OPEN SOURCE · MIT · <a href="https://github.com/harshgoyal1/cloud-architect-skills" style="color:#fff;">github.com/harshgoyal1/cloud-architect-skills</a></div><h3>cloud-architect-skills</h3></div>
+      <div class="pcard-body"><p>Five reviews a cloud architect actually runs, as AI skills: landing zone (CAF), IaC security, Well-Architected, STRIDE threat model with agentic threats, and FinOps. Evidence-or-nothing, ranked by blast radius, no padding.</p><div class="result-pill">🧰 Works with Claude Code, Cursor, Codex, Copilot</div><div class="tag-row"><span class="tag">CAF</span><span class="tag">WAF</span><span class="tag">STRIDE</span><span class="tag">FinOps</span></div></div></article>
+
+    <article class="pcard reveal" data-cat="oss"><div class="pcard-top pt-amber"><div class="pcard-domain">OPEN SOURCE · MIT · <a href="https://github.com/harshgoyal1/ground-truth" style="color:#fff;">github.com/harshgoyal1/ground-truth</a></div><h3>ground-truth</h3></div>
+      <div class="pcard-body"><p>An evidence-based self-review. Points any AI assistant at your own git history, files and sessions, and asks whether what you claim matches what you actually did. Deliberately anti-flattery, local-only.</p><div class="result-pill">🪞 Your git history doesn't lie</div><div class="tag-row"><span class="tag">git</span><span class="tag">self-review</span><span class="tag">prompt</span></div></div></article>
+  </div>
+</div></section>
+
+<section id="experience" style="background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);"><div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow">🧭 Experience</span><h2>Where I've <span class="grad-text">built this</span></h2></div>
+  <div class="xp-wrap">
+    <div class="xp-item reveal"><div class="xp-dot"></div><div class="xp-card"><div class="xp-head"><div><div class="xp-role">Cloud Lead Consultant</div><div class="xp-org">Xebia · Dubai, UAE</div></div><span class="xp-date">2025 – PRESENT</span></div>
+      <ul><li>Lead 50+ engineers across cloud, DevOps, infrastructure, security and AI/ML, owning end-to-end architecture and delivery of a $2M+ multi-cloud transformation program across MEA.</li><li>Architect and govern Azure, AWS and GCP environments — landing zones, networking, identity, governance and AI/GenAI integration — for MOHESR, HCT, Alef Education and Agthia.</li><li>Migrated 500+ Kubernetes workloads to Azure at ~25–30% lower infrastructure cost; 3–5× faster deployments through Terraform and CI/CD automation.</li><li>Designed and built CloudOps360, the enterprise AI governance framework, and multi-cloud AI-SRE agents for Princess Cruise Lines; set up Azure API Management for MOHESR, HCT and Citadel ARC.</li></ul></div></div>
+    <div class="xp-item reveal" data-d="1"><div class="xp-dot"></div><div class="xp-card"><div class="xp-head"><div><div class="xp-role">Senior Cloud Architect</div><div class="xp-org">E7 Group · Abu Dhabi, UAE</div></div><span class="xp-date">2024 – 2025</span></div>
+      <ul><li>Designed resilient, scalable landing zones with the Cloud Adoption Framework for organization-wide modernization.</li><li>Led SAP-on-cloud transformation and legacy application modernization; built secure, compliant environments (IAM, encryption, governance) with DR/BCP strategies.</li></ul></div></div>
+    <div class="xp-item reveal" data-d="2"><div class="xp-dot"></div><div class="xp-card"><div class="xp-head"><div><div class="xp-role">Solutions Architect</div><div class="xp-org">Protean eGov Technologies · Pune, India</div></div><span class="xp-date">2023 – 2024</span></div>
+      <ul><li>Built an organization-wide multi-cloud (GCP, Azure, AWS) landing zone and led the design of ONDC — one of India's largest networks.</li><li>Developed, secured and operated 40+ nationally used applications on Kubernetes; led incident response and RCA; managed a 15+ member team; integrated MOSIP identity.</li></ul></div></div>
+    <div class="xp-item reveal" data-d="3"><div class="xp-dot"></div><div class="xp-card"><div class="xp-head"><div><div class="xp-role">Cloud Consultant</div><div class="xp-org">Celebal Technologies · Jaipur, India</div></div><span class="xp-date">2020 – 2023</span></div>
+      <ul><li>Led migration and modernization of India's largest aviation company — 120+ monolithic applications to PaaS/SaaS.</li><li>Built Azure solutions with security and compliance controls; migrated on-prem Dynamics 365 to online for one of the USA's largest hospitals.</li></ul></div></div>
+  </div>
+</div></section>
+
+<section id="recognition"><div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow">🏆 Recognition &amp; community</span><h2>Awards, credentials <span class="grad-text">and open source</span></h2></div>
+  <div class="rec-grid">
+    <div class="rec-card reveal"><div class="rec-top pt-amber"><span class="rec-icon">🏆</span><span class="rec-top-label">ORGANIZATION-WIDE AWARD</span></div><div class="rec-body"><span class="rec-tag">BEST INFRASTRUCTURE ARCHITECT</span><h3>Recognised across the organization for infrastructure architecture</h3><p>Awarded for the design and delivery quality of the cloud foundations behind the programs above.</p><span class="rec-stat">🏆 Organization-wide</span></div></div>
+    <div class="rec-card reveal" data-d="1"><div class="rec-top pt-blue"><span class="rec-icon">🧠</span><span class="rec-top-label">ANTHROPIC · 2026</span></div><div class="rec-body"><span class="rec-tag">CLAUDE CERTIFIED ARCHITECT</span><h3>Certified on designing agentic systems with Claude</h3><p>Alongside Azure AI Apps &amp; Agents Developer (AI-103) and Cybersecurity Architect Expert (SC-100) — the AI and security halves of the same job.</p><span class="rec-stat">🎓 3 AI &amp; security certs in 2026</span></div></div>
+    <div class="rec-card reveal" data-d="2"><div class="rec-top pt-teal"><span class="rec-icon">⭐</span><span class="rec-top-label">OPEN SOURCE · GITHUB</span></div><div class="rec-body"><span class="rec-tag">THREE MIT-LICENSED SKILLS</span><h3>Evidence-first review tools for AI assistants</h3><p>ground-truth (yourself), cloud-architect-skills (your estate), audit-truth (your agents) — the same stance applied to three surfaces.</p><span class="rec-stat">🔗 github.com/harshgoyal1</span></div></div>
+  </div>
+</div></section>
+
+<section id="credentials"><div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow">🎓 Credentials</span><h2>Certified across the <span class="grad-text">enterprise cloud &amp; AI stack</span></h2></div>
+  <div class="cred-grid">
+    <div class="cred-card reveal"><div class="cred-logo"><img class="logo" data-l="AI" src="https://cdn.simpleicons.org/anthropic/191919" alt="Anthropic"></div><div><b>Claude Certified Architect</b><span>Anthropic · 2026</span></div></div>
+    <div class="cred-card reveal" data-d="1"><div class="cred-logo"><svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#F25022"/><rect x="12" y="1" width="10" height="10" fill="#7FBA00"/><rect x="1" y="12" width="10" height="10" fill="#00A4EF"/><rect x="12" y="12" width="10" height="10" fill="#FFB900"/></svg></div><div><b>Cybersecurity Architect Expert</b><span>Microsoft · SC-100 · 2026</span></div></div>
+    <div class="cred-card reveal" data-d="2"><div class="cred-logo"><svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#F25022"/><rect x="12" y="1" width="10" height="10" fill="#7FBA00"/><rect x="1" y="12" width="10" height="10" fill="#00A4EF"/><rect x="12" y="12" width="10" height="10" fill="#FFB900"/></svg></div><div><b>Azure Solutions Architect Expert</b><span>Microsoft · AZ-305 · 2026</span></div></div>
+    <div class="cred-card reveal"><div class="cred-logo"><svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#F25022"/><rect x="12" y="1" width="10" height="10" fill="#7FBA00"/><rect x="1" y="12" width="10" height="10" fill="#00A4EF"/><rect x="12" y="12" width="10" height="10" fill="#FFB900"/></svg></div><div><b>Azure AI Apps &amp; Agents Developer Associate</b><span>Microsoft · AI-103 · 2026</span></div></div>
+    <div class="cred-card reveal" data-d="1"><div class="cred-logo"><img class="logo" data-l="GC" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud"></div><div><b>Professional Cloud Architect</b><span>Google Cloud · 2026</span></div></div>
+    <div class="cred-card reveal" data-d="2"><div class="cred-logo"><img class="logo" data-l="AWS" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS"></div><div><b>Certified Solutions Architect</b><span>AWS · 2025</span></div></div>
+    <div class="cred-card reveal"><div class="cred-logo"><svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#F25022"/><rect x="12" y="1" width="10" height="10" fill="#7FBA00"/><rect x="1" y="12" width="10" height="10" fill="#00A4EF"/><rect x="12" y="12" width="10" height="10" fill="#FFB900"/></svg></div><div><b>Azure Security Engineer Associate</b><span>Microsoft · AZ-500</span></div></div>
+    <div class="cred-card reveal" data-d="1"><div class="cred-logo"><svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#F25022"/><rect x="12" y="1" width="10" height="10" fill="#7FBA00"/><rect x="1" y="12" width="10" height="10" fill="#00A4EF"/><rect x="12" y="12" width="10" height="10" fill="#FFB900"/></svg></div><div><b>Azure Fundamentals</b><span>Microsoft · AZ-900</span></div></div>
+  </div>
+  <div class="edu-band reveal"><div class="edu-icon">🎓</div><div><b style="font-family:'Sora',sans-serif;font-size:1.05rem;">B.Tech, Computer Science</b><p style="color:var(--ink-soft);font-size:.9rem;margin-top:3px;">Rajasthan Technical University, Kota · 2017 – 2021</p></div></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="contact-band reveal"><div class="contact-inner">
+    <span class="eyebrow" style="background:rgba(255,255,255,.12);color:#fff;">📬 Get in touch</span>
+    <h2>Let's build the platform your AI runs on</h2>
+    <p class="sub">Agentic AI platforms, cloud security architecture, AI governance — happy to talk through the architecture first. Email is the best way to reach me.</p>
+    <div class="email-hero"><span class="addr">hg329558@gmail.com</span><div class="email-actions"><button class="btn btn-white" id="copyBtn" title="Copy email address">⧉ Copy address</button></div></div>
+    <div class="contact-foot">
+      <a href="https://www.linkedin.com/in/harshgoyal329558" target="_blank" rel="noopener"><img class="logo" data-l="in" src="https://api.iconify.design/logos/linkedin-icon.svg" alt="" style="border-radius:4px;">linkedin.com/in/harshgoyal329558</a><span>·</span>
+      <a href="https://github.com/harshgoyal1" target="_blank" rel="noopener"><img class="logo" data-l="gh" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="" style="filter:invert(1);">github.com/harshgoyal1</a><span>·</span>
+      <span>📍 Abu Dhabi, UAE</span>
+    </div>
+  </div></div>
+</div></section>
+</main>
+<footer><div class="foot-brand"><span class="brand-logo">HG</span>Harsh Goyal</div>AI Platform &amp; Cloud Architect · Agentic AI · AI Governance · Multi-Cloud DevSecOps<br><span class="mono" style="font-size:.75rem;">Abu Dhabi, UAE</span></footer>
+<div id="toast">Email copied to clipboard ✓</div>
+<script>
+document.querySelectorAll('img.logo').forEach(img=>{img.addEventListener('error',()=>{const b=document.createElement('span');b.className='logo-fallback';b.textContent=img.dataset.l||'•';b.style.width=(img.width||24)+'px';b.style.height=(img.height||24)+'px';img.replaceWith(b);});});
+const pf=document.getElementById('photoFrame'),pi=document.getElementById('photoImg');pi.addEventListener('load',()=>pf.classList.add('has-img'));if(pi.complete&&pi.naturalWidth>0)pf.classList.add('has-img');
+const nav=document.getElementById('nav'),progress=document.getElementById('progress'),secIds=['about','presales','capabilities','skills','work','experience','recognition','contact'];
+document.addEventListener('scroll',()=>{const h=document.documentElement;progress.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';nav.classList.toggle('scrolled',h.scrollTop>20);let cur='';secIds.forEach(id=>{const el=document.getElementById(id);if(!el)return;const r=el.getBoundingClientRect();if(r.top<=150&&r.bottom>150)cur=id;});document.querySelectorAll('.nav-links a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));},{passive:true});
+const burger=document.getElementById('hamburger'),navLinks=document.getElementById('navLinks');burger.addEventListener('click',()=>navLinks.classList.toggle('open'));navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+const roles=["agentic AI platforms.","cloud foundations at scale.","autonomous cloud operations.","AI governance that holds up.","the landing zone AND the agents."],typed=document.getElementById('typed');let ri=0,ci=0,deleting=false;const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function typeLoop(){const w=roles[ri];if(!deleting){typed.textContent=w.slice(0,++ci);if(ci===w.length){deleting=true;return setTimeout(typeLoop,1900);}setTimeout(typeLoop,55);}else{typed.textContent=w.slice(0,--ci);if(ci===0){deleting=false;ri=(ri+1)%roles.length;return setTimeout(typeLoop,350);}setTimeout(typeLoop,28);}}
+if(reduceMotion){typed.textContent=roles[0];}else{typeLoop();}
+const canvas=document.getElementById('net'),ctx=canvas.getContext('2d');let nodes=[],W,H,mouse={x:null,y:null};
+function sizeCanvas(){const hero=canvas.parentElement;W=canvas.width=hero.offsetWidth;H=canvas.height=hero.offsetHeight;const count=Math.min(70,Math.floor(W*H/22000));nodes=Array.from({length:count},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.45,vy:(Math.random()-.5)*.45,r:Math.random()*2.2+1.2}));}
+sizeCanvas();window.addEventListener('resize',sizeCanvas);canvas.parentElement.addEventListener('mousemove',e=>{const r=canvas.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;});canvas.parentElement.addEventListener('mouseleave',()=>{mouse.x=null;});
+function drawNet(){ctx.clearRect(0,0,W,H);for(const n of nodes){n.x+=n.vx;n.y+=n.vy;if(n.x<0||n.x>W)n.vx*=-1;if(n.y<0||n.y>H)n.vy*=-1;}for(let i=0;i<nodes.length;i++){for(let j=i+1;j<nodes.length;j++){const a=nodes[i],b=nodes[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<130){ctx.strokeStyle=`rgba(51,70,110,${(1-d/130)*.18})`;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}if(mouse.x!==null){const a=nodes[i],d=Math.hypot(a.x-mouse.x,a.y-mouse.y);if(d<170){ctx.strokeStyle=`rgba(87,80,110,${(1-d/170)*.35})`;ctx.lineWidth=1.1;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(mouse.x,mouse.y);ctx.stroke();}}}for(const n of nodes){ctx.fillStyle='rgba(51,70,110,.5)';ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,Math.PI*2);ctx.fill();}requestAnimationFrame(drawNet);}
+if(!reduceMotion)drawNet();
+const loopDescs=["<b>01 · Design.</b>&nbsp; Landing zone, identity, network, governance and the AI layer designed as one system — trade-offs written down, sized to the client's real estate and regulator.","<b>02 · Secure.</b>&nbsp; Zero Trust, Entra ID / IAM, policy-as-code and security baselines wired in from the foundation, so agents inherit constraints instead of bypassing them.","<b>03 · Automate.</b>&nbsp; Everything as code: Terraform, GitOps, CI/CD with security gates. Production changes only happen through the repository.","<b>04 · Operate.</b>&nbsp; Observability, approval-gated auto-remediation, and audit trails an auditor can actually use. Autonomy that can be defended."];
+const loopCards=document.querySelectorAll('.loop-card'),loopDesc=document.getElementById('loopDesc');function setLoop(i){loopCards.forEach((c,idx)=>c.classList.toggle('active',idx==i));loopDesc.innerHTML=loopDescs[i];}loopCards.forEach(c=>c.addEventListener('click',()=>setLoop(c.dataset.i)));setLoop(0);
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('.fbtn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.f;document.querySelectorAll('.pcard').forEach(c=>c.classList.toggle('hide',f!=='all'&&c.dataset.cat!==f));});});
+const track=document.getElementById('marqueeTrack');track.innerHTML+=track.innerHTML;track.querySelectorAll('img.logo').forEach(img=>{img.addEventListener('error',()=>{const b=document.createElement('span');b.className='logo-fallback';b.textContent=img.dataset.l||'•';b.style.width='24px';b.style.height='24px';img.replaceWith(b);});});
+const toast=document.getElementById('toast');document.getElementById('copyBtn').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('hg329558@gmail.com');toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2200);}catch(e){window.location.href='mailto:hg329558@gmail.com';}});
+</script>
+</body>
+</html>
